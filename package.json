@@ -1,0 +1,20 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "shared"
+  ],
+  "scripts": {
+    "predev:service1": "npm run dev -w shared &",
+    "dev:service1": "npm start -w apps/service1",
+    "prebuild:service1": "npm run build -w shared",
+    "build:service1": "npm run build -w apps/service1",
+    "predev:service2": "npm run dev -w shared &",
+    "dev:service2": "npm run dev -w apps/service2",
+    "prebuild:service2": "npm run build -w shared",
+    "build:service2": "npm run build -w apps/service2",
+    "start:service2": "npm start -w apps/service2"
+  }
+}
